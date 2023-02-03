@@ -1,6 +1,6 @@
 # What are variables?
 
-'''Variables are names given to data that we need to store and manipulate
+'''Variables are names given to data  that we need to store and manipulate
 in our programs'''
 
 #  To do that, we can name this data userAge and define the variable userAge 
