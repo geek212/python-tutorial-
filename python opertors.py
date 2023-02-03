@@ -1,6 +1,5 @@
 #### Python’s Arithmetic Operators #####
 
-### Operator Description Example ###
 
 # + Addition 1 + 1 = 2
 # - Subtraction 10 - 1 = 9
