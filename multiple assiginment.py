@@ -11,7 +11,7 @@ print(attractive)
 
 # a = "hi"
 # b = ashwin
-# c = "how are you"
+# c = "how are  you"
 
 a , b , c = "hi" , "ashwin" , "how are you"
 
