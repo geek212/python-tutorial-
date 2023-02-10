@@ -98,4 +98,42 @@ user_length = 9.7
 print("user age matchs with length" + " " , str(age))
  
 
+ ser_age = 56
+user_age = str(56)
+print(type(user_age))
+
+user_ashwin = "56"
+user_ashwin = int("56")
+print(type(user_ashwin))
+
+user_length = 67.4
+user_length  = int(67.4)
+print(type(user_length))
+
+User_id = 677
+User_id = float(677)
+print(type(User_id))
+
+
+n = 4
+n = complex(4)
+print(4j)
+print(type(n))
+
+
+u = 67<435
+print(67<435)
+print(type(u))
+
+h = 78 ,67,76
+print(type(h))
+
+ui = [67 ,45 ,565,56]
+print(type(ui))
+
+# hu = 78 , 67 ,76
+# hu = float(hu)        # error shown when i try to change tuple to int or
+#  print(type(hu))        #    float reason behind this is u cannot change tuple# 
+ 
+ 
 
