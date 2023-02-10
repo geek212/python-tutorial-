@@ -190,3 +190,37 @@ print(story)
 
 notes = "computer understa\nnd the language \tof numbers of binar\\y"
 print(notes)
+
+
+# pratice with input and replace str function
+
+Addmission = '''Dear <|NAME|>
+your are selected for the interview in 
+cod in mumbai
+Date : <|DATE|>
+'''
+name = input("Enter your name\n")
+date = input("Enter date\n")
+
+Addmission = Addmission.replace("<|NAME|>", name)
+Addmission = Addmission.replace("<|DATE|>", date)
+
+print(Addmission)
+
+
+letter = '''Dear name
+your are selected for the interview
+in mumbai for interinship
+DATE : <|DATE|>
+'''
+NAME = input("Enter your name")
+date = input("Enter DATE")
+
+letter = letter.replace("name", NAME)
+letter = letter.replace("<|DATE|>", date)
+
+print(letter)
+
+
+
+
