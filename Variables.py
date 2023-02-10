@@ -114,6 +114,22 @@ last_name = "nao"
 full_name = frist_name + " " + last_name
 print("hi"+ " " + full_name)
 
+frist_name = "ashwin"
+last_name = "kumar sudhakar nair"
+full_name = frist_name + " " + last_name
+print("hello how are you"+ " " + full_name)
+
+username = "akash"
+userlast_name = "kumar"
+full_name = username + "  " + userlast_name
+print("welcome to google akash kumar")
+
+
+# quantity_price = 24
+# unit_price = "45.34"                          u cannot use int and str for arthemtic operation
+# overall_cost = quantity_price + unit_price     it shows error in variables chapter
+# print("profit margin is ")
+
 
 
 
