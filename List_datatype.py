@@ -325,3 +325,133 @@ letters.remove("C")
 print(letters)
 # When you actually execute this code and then print the list, you’ll see that only the 
 # first letter C has been removed:
+
+
+# Cerate a lists of string .
+letters2 = ["A", "B", "B", "C"]
+# Remove "A" from list
+letters2.remove("A")
+print(letters2)
+
+
+ Removeing list items useing [Pop()]
+
+# If you want to remove an item based on its position in the list, use pop() with an 
+# index number rather than remove() with a value. If you want to remove the last 
+# item from the list, use pop() without an index number. For example, the following code 
+# creates a list, one line removes the first item (0), and another removes 
+# the last item (pop() with nothing in the parentheses). Printing the list shows 
+# those two items have been removed:
+
+letters3 = ["A", "B", "B", "C", "D"]
+letters3.pop(0)
+letters3.pop(2)
+print(letters3)
+
+letters4 = ["A", "B", "C", "sd", "D"]
+letters4.pop(3)
+print(letters4)
+
+# When you pop() an item off the list, you can store a copy of that value in some 
+# variable.
+
+# Cerate list of string
+
+letter0 = ["a", "A", "b", "B", "C", "c", "D", "d"]
+
+#  Make a copy of frist list item then remove them
+frist_letter_removed = letter0.pop(0)
+ 
+
+# Make a copy of last list item then remove it
+last_letter_removed = letter0.pop()
+
+# Show the result
+print(letter0)
+
+# Show what is been removed
+print(frist_letter_removed  +"  " + "and " + last_letter_removed + "  " + "were removed from the list")
+
+
+# Removeing list item using del(delete)
+
+# Python also offers a del (short for delete) command that deletes any item from 
+# a list based on its index number (position). But again, you have to remember 
+# that the first item is zero. So, let’s say you run the following code to delete item 
+# number 2 from the list
+
+# Cerate a list of strings
+letters = ["A", "a", "B", "C", "D"]
+
+# Remove item 1
+del letters[1]
+
+# Show the result
+print(letters)
+
+# Cerate a list of Second strings
+
+letters5 = ["A", "wr", "GFS", "B", "C"]
+
+# Remove item 1 and 2 using  del
+
+del letters5[2]
+del letters5[0]
+ 
+
+# Show the results 
+print(letters5)
+
+
+# Clearing out a list items
+
+# If you want to delete the contents of a list but not the list itself, use .clear(). The 
+# list still exists; however, it contains no items ,In other words, it’s an empty list
+# The following code shows how you could test this.
+
+# Cerate a list of strings
+
+letters = ["a", "sfsf", "sdf", "A"]
+
+# Clear the list of all entries
+letters.clear()
+
+# Show the result
+print(letters)  # output is [] its been cleared the list wow 
+
+
+
+# Cerate a list of numbers
+numbers = [43.34, 34 , 342 , 24]
+
+# Clear the list of all entries 
+numbers.clear()
+
+# Show the result # wowww i luv it again the output is []
+print(numbers)
+
+
+# Counting how many times an item appears in a list
+
+# You can use the Python count() method to count how many times an item appears 
+# in a list. As with other list methods, the syntax is simple:
+# listname.count(x)
+
+# Replace listname with the name of your list, and x with the value you’re looking 
+# for (or the name of a variable that contains that value).
+
+
+
+# Cerate a list of string 
+students_name = ["Ashwin", "Sabin", "Ashwin", "nair"]
+
+# Count a student names
+students_name  = students_name.count("Ashwin") # use = with a given variable or it will not show the count
+
+# Show the result
+print(students_name)
+
+
+ 
+
+
