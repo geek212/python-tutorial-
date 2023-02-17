@@ -454,4 +454,158 @@ print(students_name)
 
  
 
+# The sort() method is one of the ways you can sort a list in Python.
+
+# When using sort(), you sort a list in-place.
+# This means that the original list is directly modified. Specifially,
+# the original order of elements is altered.
+# The general syntax for the sort() method looks like this
+ 
+
+L1 = [1,3,4,5,2,6,9,7,8,10]
+L1.sort()
+print(L1)    # output [1,2,3,4,5,6,7,8,9,10] u get sorted result
+
+# list of strings for sort() method
+
+programing_language = ["Java", "C++", "python", "SQL", "NOJS"]
+programing_language.sort()
+print(programing_language)
+
+
+# Reversing a list
+
+# You can also reverse the order of items in a list using the .reverse method. This 
+# is not the same as sorting in reverse, because when you sort in reverse, you still 
+# actually sort: Z–A for strings, largest to smallest for numbers, latest to earliest for 
+# dates. When you reverse a list, you simply reverse the items in the list, no matter 
+# their order, without trying to sort them in any way
+
+
+# Create a list of strings.
+names = ["Zara", "Lupe", "Hong", "Alberto", "Jake"]
+
+# Reverse the list of string
+names.reverse()
+print(names)
+#  output will be ['Jake', 'Alberto', 'Hong', 'Lupe', 'Zara']
+
+
+# Copying a list
+
+# If you ever need to work with a copy of a list, use the .copy() method so as not to 
+# alter the original list,. For example, the following code is similar to the preceding 
+# code, except that instead of reversing the order of the original list, we make a copy 
+# of the list and reverse that one. Printing the contents of each list shows how the 
+# first list is still in the original order whereas the second one is reversed
+
+# eg:1 Create a list of strings.
+names = ["Zara", "Lupe", "Hong", "Alberto", "Jake"]
+
+# Copy a list
+names.copy()
+
+# output
+print(names)
+
+# eg:2 Create a list of strings.
+
+names = ["Zara", "Lupe", "Hong", "Alberto", "Jake"]
+
+# copy the string in backword
+back_word = names.copy()
+
+# Reverse the copy
+back_word.reverse() 
+
+# print the result
+print(names)
+print(back_word)
+
+
+
+
+# The sort() method is one of the ways you can sort a list in Python.
+
+# When using sort(), you sort a list in-place.
+# This means that the original list is directly modified. Specifially,
+# the original order of elements is altered.
+# The general syntax for the sort() method looks like this
+ 
+
+L1 = [1,3,4,5,2,6,9,7,8,10]
+L1.sort()
+print(L1)    # output [1,2,3,4,5,6,7,8,9,10] u get sorted result
+
+# list of strings for sort() method
+
+programing_language = ["Java", "C++", "python", "SQL", "NOJS"]
+programing_language.sort()
+print(programing_language)
+
+
+# Reversing a list
+
+# You can also reverse the order of items in a list using the .reverse method. This 
+# is not the same as sorting in reverse, because when you sort in reverse, you still 
+# actually sort: Z–A for strings, largest to smallest for numbers, latest to earliest for 
+# dates. When you reverse a list, you simply reverse the items in the list, no matter 
+# their order, without trying to sort them in any way
+
+
+# Create a list of strings.
+names = ["Zara", "Lupe", "Hong", "Alberto", "Jake"]
+
+# Reverse the list of string
+names.reverse()
+print(names)
+#  output will be ['Jake', 'Alberto', 'Hong', 'Lupe', 'Zara']
+
+
+# Copying a list
+
+# If you ever need to work with a copy of a list, use the .copy() method so as not to 
+# alter the original list,. For example, the following code is similar to the preceding 
+# code, except that instead of reversing the order of the original list, we make a copy 
+# of the list and reverse that one. Printing the contents of each list shows how the 
+# first list is still in the original order whereas the second one is reversed
+
+# eg:1 Create a list of strings.
+names = ["Zara", "Lupe", "Hong", "Alberto", "Jake"]
+
+# Copy a list
+names.copy()
+
+# output
+print(names)
+
+# eg:2 Create a list of strings.
+
+names = ["Zara", "Lupe", "Hong", "Alberto", "Jake"]
+
+# copy the string in backword
+back_word = names.copy()
+
+# Reverse the copy
+back_word.reverse() 
+
+# print the result
+print(names)
+print(back_word)
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
 
