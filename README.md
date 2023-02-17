@@ -1,4 +1,4 @@
-Python is frist language this scripts are my learning methods 
+Python is My frist language this scripts are my learning methods 
 
 The source which i used for learning_python is Google,youtube,also books in pdf fromat
 it was not easy to self_learn cozz knowledge is distributed u have to fliterd and sort it
