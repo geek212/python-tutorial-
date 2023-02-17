@@ -7,6 +7,5 @@ it was not easy to self_learn cozz knowledge is distributed u have to fliterd an
 To start to learn was diffcult but when u get familiar with python then its favorable 
 i don't have any CS or Btech , my education was in commerce streams 
 
-my aim to learn python is personal and also hope to job 
 
    
