@@ -198,7 +198,529 @@ will be changed to whatever you specify as the value
 '''
 
 
+#  make a drictionories of two names
+
+Employee_name = {
+    "Gary" : "neel",
+    "yasav": "janet"
+} 
+
+# Change the value of "yasav"
+
+Employee_name.update({"yasav":"berttman"})
+
+#  update the dridtioner with new pair
+Employee_name.update({"Danny":"King"})
+
+print(Employee_name)
+
+#  Adding the following lines to the 
+# end of that code displays everything in the dictionary:
+
+# Show what is in dictionaries
+for person in Employee_name.keys() :
+    print(person + "'='" + Employee_name[person] )
+# "'='" is only for spaces
+
+# As you may have guessed, you can loop through a dictionary in much the same 
+# way you loop through lists, tuples, and sets.
 
 
+#  IMP
+# If the key already exists in the dictionary, then its value is updated, because no 
+# two items in a dictionary are allowed to have the same key
+
+# IMP
+# If the key does not already exist, then the key-value pair is added because 
+# there is nothing in the dictionary that already has that key, so the only choice 
+# is to add it.
 
  
+
+
+#  Looping through a Dictionary
+
+# You can loop through each item in a dictionary in much the same way you can loop 
+# through lists and tuples. But you have some extra options. If you just specify the 
+# dictionary name in the for loop, you get all the keys
+
+student_name = {
+
+
+
+    #Keys  : values
+
+    "Harry":"jaket",
+    "Janet":"jackson",
+    "mike":"ken",
+    "karan":"shrama",
+    "harry":"coder"
+}
+
+for students in student_name:
+    print(students)
+
+#  Above is looping dictionaries for keys with [ for] and [in]
+
+
+# If you want to see the value of each item, keep the for loop the same, but print 
+# dictionaryname[key] where dictionary name is the name of the dictionary this
+# way with syntax dictionaries_name[key]
+
+
+for students in student_name:
+    print(student_name[students])
+
+
+# You can also get all the names just by using a slightly different syntax in the for
+# loop: . . . add .{values()} to the dictionary name as in the following. Then you can 
+# just print the variable name (students), and you will still see the value before you’re 
+# looping through the values. 
+
+
+for students in student_name.values():
+    print(students)
+
+
+
+#  loop through the keys and values at the same time by using 
+# {items()} after the dictionary name in the for loop. But you will need two variables 
+# after the for as well, one to reference the key, the other to reference the 
+# value. If you want so see both as you’re looking through, then you’ll need to use 
+# those same names inside the parentheses of the print
+
+for key , values in student_name.items():
+    print(key,  '=', values)
+
+
+
+# Data Dictionary Methods
+
+# Method  :       What it Does
+
+# clear() : Empties the dictionary by remove all keys and values.
+
+# copy() : Returns a copy of the dictionary.
+
+# fromkeys() : Returns a new copy of the dictionary but with only specified keys 
+#               and values.
+
+# get() : Returns the value of the specified key, or None if it doesn’t exist.
+
+# items() : Returns a list of items as a tuple for each key-value pair.
+
+# keys() :Returns a list of all the keys in a dictionary.
+
+# pop() : Removes the item specified by the key from the dictionary, and stores 
+#         it in a variable.
+
+# popitem() : Removes the last key-value pair
+
+
+# setdefault() : Returns the value of the specified key. If the key does not exist: insert 
+#                the key, with the specified value.
+
+# update() : Updates the value of an existing key, or adds a new key-value pair if 
+#             the specified key isn’t already in the dictionary.
+
+# values() : Returns a list of all the values in the dictionary.
+
+
+
+
+#  now some reaming methods like copying in dictionaries
+
+# If you need to make a copy of a data dictionary to work with, use this syntax:
+# newdictionaryname = dictionaryname.copy()
+# Replace newdictionaryname with whatever you want to name the new dictionary. 
+# Replace dictionaryname with the name of the existing dictionary that you want 
+# to copy
+
+
+share_market = {
+
+    "Tata":"Motors",
+    "mahindra":"motors",
+    "maruti":"suzuki",
+    "lanser":"turbo"
+}
+
+# Make a copy of this dictionaries of share_market put in motors_market
+motors_market = share_market.copy()
+
+# show the output of both share_market and motors_market
+print(share_market)
+print(motors_market)
+
+#  we created another dictionary named motors_market as a copy of thatcompanys
+# dictionary. Printing the contents of each dictionary shows that they are indeed 
+# identical.
+
+
+
+
+# Deleting Dictionary Items #
+
+
+
+# There are several ways to remove data from data dictionaries. The del keyword 
+# (short for delete) can remove any item based on its key. The syntax is as follows:
+# del dictionaryname[key]
+
+
+Games = {
+
+    "contra":"japan",
+    "street_fighter":"japan",
+    "mariobros":"usa"
+
+}
+
+#  i just have used some random  games and the countrys as 
+#   keys and values its not specificly correct its just for
+#  understanding the Dictionaries deleting methods which i will do 
+
+
+# Showin orginal games keys and values with output
+print(Games)
+
+# Now i m useing del methods to earse one key and values
+del Games["street_fighter"]         
+
+
+# now print the del method
+print(Games)
+
+# output
+# {'contra': 'japan', 'mariobros': 'usa'}
+
+# If you forget to include a specific key with the del keyword, and specify only the 
+# dictionary name, then the entire dictionary is deleted, even its name. For example, 
+# if you executed del people instead of using del Games["street_fighter"] in the preceding code,
+# the output of the second print(Games) would be an error, as in the 
+# following, because after it’s deleted the people dictionary no longer exists and its 
+# content cannot be displayed
+
+
+# Clear method in Dictionaries
+
+# To remove all key-value pairs from a dictionary without deleting the entire 
+# dictionary, use the clear method with this syntax:
+# dictionaryname.clear()
+
+Mumbai = {
+    "Thane":"CR",
+    "Navi_mumbai":"HBR",
+    "Bandra":"WR"
+}
+
+# show the orginal dictionaries of Mumbai
+
+print(Mumbai)
+
+
+# Now using clear method
+Mumbai.clear()
+
+
+# output 
+print(Mumbai)
+
+# {} final output with this method.
+# Running this code shows that initially the people data dictionary 
+# contains three property:value pairs. After using Mumbai.clear() to wipe it 
+# clear, printing the people dictionary displays {}, which is Python’s way of telling 
+# you that the dictionary is empty.
+
+
+
+
+# Using pop() with Data Dictionaries
+
+
+# The pop() method offers another way to remove data from a data dictionary. 
+# It actually does two things:
+
+# » If you store the results of the pop() to a variable, that variable gets the value 
+# of the popped key.
+# » Regardless of whether you store the result of the pop in a variable, the 
+# specified key is removed from the dictionary.
+
+
+# Cerate the Dictionaries of customers names as key and values as their surnames
+
+Customers = {
+    "Mike":"Tyson",
+    "Danny":"king",
+    "Henry":"leon",
+    "kai":"jackson"
+
+}
+
+# show the real output before useing pop()
+print(Customers)
+
+
+# now use a variable for pop() method for dictionarie
+login = Customers.pop("Henry")
+
+# now print the variable login
+print(login)
+
+# now with popitem()
+logins = Customers.popitem()
+print(logins)
+# If you store the results of popitem to a variable, you don’t get that item’s value, 
+# which is different from the way pop() works. Instead, you get both the key and its 
+# value. The dictionary no longer contains that key-value pair with popitem().
+
+
+# Data dictionaries offer a variation on pop() that uses this syntax:
+# dictionaryname = popitem()
+# This one is tricky because in some earlier versions of Python it would remove some 
+# item at random. That’s kind of weird unless you’re writing a game or something 
+# and you do indeed want to remove things at random
+
+
+
+
+
+#  Multi-Key Dictionaries #
+
+
+
+# For example, suppose that just knowing the person’s full name isn’t enough. You 
+# want to also know the year they were hired, their date of birth, and whether or 
+# not that employee has been issued a company laptop. The dictionary for any one 
+# person may look more like this:
+
+# employee = {
+#  'name' : 'Haru Tanaka',
+#  'year_hired' : 2005,
+#  'dob' : '11/23/1987',
+#  'has_laptop' : False
+# }
+
+
+# Suppose you need a dictionary of products that you sell. For each product you 
+# want to know its name, its unit price, whether or not it’s taxable, and how many 
+# you currently have in stock. The dictionary may look something like this (for one 
+# product):
+
+# product = {
+#  'name' : 'Ray-Ban Wayfarer Sunglasses',
+#  'unit_price' : 112.99,
+#  'taxable' : True,
+#  'in_stock' : 10
+# }
+
+
+# Notice that in each example, the key name is always enclosed in quotation marks. 
+# We even enclosed the date in dob (date of birth) in quotation marks. If you don’t, it 
+# may be treated as a set of numbers, as in “11 divided by 23 divided by 1987” which 
+# isn’t useful information. Booleans are either True or False (initial caps) with no 
+# quotation marks. Integers (2005, 10) and floats (112.99) are not enclosed in quotation marks either. 
+# It’s important to make sure you always do these correctly, as 
+# shown in the examples above.
+# The value for a property can be a list, tuple, or set; it doesn’t have to be a single value. 
+# For example, for the sunglasses product, maybe you offer two models 
+# (color), black and tortoise. You could add a colors or model key and list the items 
+# as a comma-separated list in square brackets like this:
+
+product = {
+ 'name' : 'Ray-Ban Wayfarer Sunglasses',
+ 'unit_price' : 112.99,
+ 'taxable' : True,
+ 'in_stock' : 10,
+ 'models' : ['Black', 'Tortoise']
+}
+
+
+# Next let’s look at how you may display the dictionary data. You can use the simple 
+# dictionaryname[key] syntax to print just the value of each key. For example, 
+# using that last product example, the output of this code:
+
+print(product['name'])
+print(product['unit_price'])
+print(product['taxable'])
+print(product['in_stock'])
+print(product['models'])
+
+# output would be:
+
+# Ray-Ban Wayfarer Sunglasses
+# 112.99
+# True
+# 10
+# ['Black', 'Tortoise']
+
+
+
+# You could fancy it up by adding some descriptive text to each print statement, 
+# followed by a comma and the code. You could also loop through the list to print 
+# each model on a separate line. And you can use an f-string to format any data if 
+# you like. For example, here is a variation on the print()
+
+
+product = {
+
+ 'name' : 'Ray-Ban Wayfarer Sunglasses',
+ 'unit_price' : 112.99,
+ 'taxable' : True,
+ 'in_stock' : 10,
+ 'models' : ['Black', 'Tortoise']
+
+}
+
+print('Name: ', product['name'])
+print('Price: ',f"${product['unit_price']:.2f}")
+
+# A formatted string literal or f-string is a string literal that is prefixed with 'f' or 'F'. 
+# These strings may contain replacement fields, which are expressions delimited by curly braces {}. 
+# While other string 
+# literals always have a constant value, formatted strings are really expressions evaluated at run time.
+# for futher in f strings Google  python_docs for more 
+
+
+print('Taxable: ',product['taxable'])
+print('In Stock:',product['in_stock'])
+print('Models:')
+
+for model in product['models']:
+
+ print(" " * 10 + model)
+
+# The " " * 10 on the last line of code says to print a space (“ ”) ten times. In other 
+# words, indent ten spaces. If you don’t put exactly one space between those quotation marks, 
+# you won’t get 10 spaces. You’ll get 10 of whatever is between the 
+# quotation marks, which also means you’ll get nothing if you don’t put anything 
+# between the quotation marks.
+
+
+
+# Python Dictionary fromkeys() Method
+
+#   fromkeys() method uses this syntax:
+# newdictionaryname = dict(iterable[,value])
+
+# Replace newdictionary name with whatever you want to name the new dictionary. 
+# It doesn’t have to be a generic name like product. It can be something that 
+# uniquely identifies the product, such as a UPC (Universal Product Code) or SKU 
+# (Stock Keeping Unit) that’s specific to your own business.
+# Replace the iterable part with any iterable — meaning, something the code can 
+# loop through; a simple list will do. The value part is optional. If omitted, each key 
+# in the dictionary gets a value of None, which is simply Python’s way of saying no 
+# value has been assigned to this key in this dictionary yet
+
+
+# Returns : A newdictionary with keys mapped to None if no value is provided, 
+# else to the value provided in the field.
+
+Dcw0001 = dict.fromkeys(['name','unitprice','quantity','clearity_one','magogo'])
+print(Dcw0001)
+
+# output 
+# {'name': None, 'unitprice': None, 'quantity': None, 'clearity_one': None, 'magogo': None}
+
+
+#  let’s say you don’t want to type out all those key names. You just want 
+# to use the same keys you’re using in other dictionaries. In that case, you can 
+# use dictionary.keys() for your iterable list of key names, so long as dictionary
+#  refers to another dictionary that already exists in the program. For example, in 
+#  the following code, we created a dictionary named product that has some 
+# key names and nothing specific for the values. Then we used DWC001 = dict.
+# fromkeys(product.keys()) to create a new dictionary with the specific name 
+# DWC001 that has the same keys as the generic product dictionary. We didn’t specify 
+# any values in the dict.fromkeys(product.keys()) line, so each of those keys in 
+# the new dictionary will have values set to None.
+
+# Cerate a genric product ditionaries
+
+product = {
+
+    'name': '',
+    'Unitprice': 0,
+    'taxable': True,
+    'in_stock': 0,
+    'models': []
+
+
+}
+
+# Cerate same name Dcw0001 dictionaries that has same key values as product
+Dcw0001 = dict.fromkeys(product.keys())
+
+
+# output
+print(Dcw0001)
+
+# {'name': None, 'Unitprice': None, 'taxable': None, 'in_stock': None, 'models': None}
+
+# The final print() statement shows what’s in the new dictionary. You can see it 
+# has all the same keys as the product dictionary, with each value set to None.
+
+
+# setdefault() method #
+
+# lets you add a new key to a dictionary, with a predefined value.
+# It only adds a new key and value, though. It will not alter the value 
+# for an existing key, even if that key’s value is None. So it could come in handy 
+# after the fact if you defined dictionaries and then later wanted to add a another 
+# property:value pair, but only to dictionaries that don’t already have that property in them.
+
+
+# useing same Dcw0001 dictinories for setdefault()
+
+
+# we created the Dcw00001 dictionary 
+# using the same keys as the product dictionary. After the dictionary is created, 
+# setdefault('taxable',True) adds a key named taxable and sets its value to 
+# True — but only if that dictionary doesn’t already have a key named taxable. It 
+# also adds a key named reorder_point and sets its value to 10, but again, only if 
+# that key doesn’t already exist.
+
+product = {
+
+    'name': '',
+    'Unitprice': 0,
+    'taxable': True,
+    'in_stock': 0,
+    'models': []
+
+
+}
+
+
+# Cerate a dictionery for product
+Dcw0001 = dict.fromkeys(product.keys())
+Dcw0001.setdefault('taxable',True)
+Dcw0001.setdefault('models',[])
+Dcw0001.setdefault('reorder',100)
+
+# Show in the dictionery output with fromkeys() and setdefault()
+print("Dictionary after fromkeys() and setdefault()")
+print(Dcw0001)
+
+# output
+# {'name': None, 'Unitprice': None, 'taxable': None, 'in_stock': None, 'models': None, 'reorder': 100}
+
+
+# So what if you really did want to set the default of taxable to True, rather than none. 
+# The simple solution there would be to use the standard syntax, dictionaryname
+# [key] = newvalue to change the value of the extant taxable key from None to True. 
+# The second output proves that changing the value of the key in that 
+# manner did work.
+
+# Cerate a dicitionary to change taxable field from none to true
+print("\nDictinoray after fromkeys() and setdefault()")
+Dcw0001 ["taxable"] = True
+
+# output
+print(Dcw0001)
+
+
+# Nesting Dictionaries pending
+
+
+
+
