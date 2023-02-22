@@ -23,7 +23,7 @@ for a beginners .
 
 This is my experience while codeing u have to put efforts to understand  python .
 
-
+ 
 
 
 <|THANK_YOU|> ........ For reading 
