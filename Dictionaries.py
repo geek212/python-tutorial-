@@ -325,6 +325,10 @@ for key , values in student_name.items():
 
 # values() : Returns a list of all the values in the dictionary.
 
+#   all()    : Return True if all keys of the dictionary are True (or if the dictionary is empty)
+
+#   any()	 : Return True if any key of the dictionary is true. If the dictionary is empty, return False.
+
 
 
 
@@ -484,117 +488,85 @@ print(logins)
 
 
 
+# all() method in dictionary 
 
-#  Multi-Key Dictionaries #
+# The all() function returns True if all items in an iterable are true, otherwise it returns False.
+# If the iterable object is empty, the all() function also returns True.
 
+# Syntax
+# all(iterable)
 
+# The Python all() function returns true if all the elements of a 
+# given iterable (List, Dictionary, Tuple, set, etc.) are True otherwise it returns False.
+# It also returns True if the iterable object is empty. Sometimes while working on some code 
+# if we want to ensure that user has not entered a False value then we use the all() function
 
-# For example, suppose that just knowing the person’s full name isn’t enough. You 
-# want to also know the year they were hired, their date of birth, and whether or 
-# not that employee has been issued a company laptop. The dictionary for any one 
-# person may look more like this:
-
-# employee = {
-#  'name' : 'Haru Tanaka',
-#  'year_hired' : 2005,
-#  'dob' : '11/23/1987',
-#  'has_laptop' : False
-# }
+# Iterable: It is an iterable object such as a dictionary,tuple,list,set,etc.
 
 
-# Suppose you need a dictionary of products that you sell. For each product you 
-# want to know its name, its unit price, whether or not it’s taxable, and how many 
-# you currently have in stock. The dictionary may look something like this (for one 
-# product):
+# All elements of dictionary are true
+d = {1: "Hello", 2: "Hi"}
+print(all(d))
 
-# product = {
-#  'name' : 'Ray-Ban Wayfarer Sunglasses',
-#  'unit_price' : 112.99,
-#  'taxable' : True,
-#  'in_stock' : 10
-# }
+# All elements of dictionary are false
+d = {0: "Hello", False: "Hey"}
+print(all(d))
 
+# Some elements of dictionary
+# are true while others are false
+d = {0: "yo", 1: "Hello", 2: "Hi"}
+print(all(d))
 
-# Notice that in each example, the key name is always enclosed in quotation marks. 
-# We even enclosed the date in dob (date of birth) in quotation marks. If you don’t, it 
-# may be treated as a set of numbers, as in “11 divided by 23 divided by 1987” which 
-# isn’t useful information. Booleans are either True or False (initial caps) with no 
-# quotation marks. Integers (2005, 10) and floats (112.99) are not enclosed in quotation marks either. 
-# It’s important to make sure you always do these correctly, as 
-# shown in the examples above.
-# The value for a property can be a list, tuple, or set; it doesn’t have to be a single value. 
-# For example, for the sunglasses product, maybe you offer two models 
-# (color), black and tortoise. You could add a colors or model key and list the items 
-# as a comma-separated list in square brackets like this:
+# Empty dictionary
+d = {}
+print(all(d))
 
-product = {
- 'name' : 'Ray-Ban Wayfarer Sunglasses',
- 'unit_price' : 112.99,
- 'taxable' : True,
- 'in_stock' : 10,
- 'models' : ['Black', 'Tortoise']
-}
+# all() with condition - to check if all letters of word 'time' are there
+l = {"t":1, "i":1, "m":2, "e":0}
+print(all(ele > 0 for ele in l.values()))
 
 
-# Next let’s look at how you may display the dictionary data. You can use the simple 
-# dictionaryname[key] syntax to print just the value of each key. For example, 
-# using that last product example, the output of this code:
+# Note: In the case of a dictionary if all the keys of the dictionary are true 
+# or the dictionary is empty the all() returns True, else it returns False.
 
-print(product['name'])
-print(product['unit_price'])
-print(product['taxable'])
-print(product['in_stock'])
-print(product['models'])
 
-# output would be:
-
-# Ray-Ban Wayfarer Sunglasses
-# 112.99
-# True
-# 10
-# ['Black', 'Tortoise']
+# IMP
+# i have use this function on list and tuple see how to performs
 
 
 
-# You could fancy it up by adding some descriptive text to each print statement, 
-# followed by a comma and the code. You could also loop through the list to print 
-# each model on a separate line. And you can use an f-string to format any data if 
-# you like. For example, here is a variation on the print()
+
+# Python any() method of dictionary  
+
+# The any() function only checks the keys (not values) in the passed dictionary. 
+# If any of the key is true in the dictionary then any() function returns true, else it returns false. 
+# The any() function returns false for empty dictionary as well.
 
 
-product = {
+# all keys are true
+dict1 = {1: 'False', 2: 'True'}
+print(any(dict1))
 
- 'name' : 'Ray-Ban Wayfarer Sunglasses',
- 'unit_price' : 112.99,
- 'taxable' : True,
- 'in_stock' : 10,
- 'models' : ['Black', 'Tortoise']
+# all keys are false
+dict2 = {0: 'False', False: 'True'}
+print(any(dict2))
 
-}
+# one key is false, other is true
+dict3 = {0: 'False', 1: 0}
+print(any(dict3))
 
-print('Name: ', product['name'])
-print('Price: ',f"${product['unit_price']:.2f}")
+# One key is true, '0' is not false its True
+# because '0' is a string not a number
+# if it is 0 without quotes then its false
+dict4 = {'0': 'False'}
+print(any(dict4))
 
-# A formatted string literal or f-string is a string literal that is prefixed with 'f' or 'F'. 
-# These strings may contain replacement fields, which are expressions delimited by curly braces {}. 
-# While other string 
-# literals always have a constant value, formatted strings are really expressions evaluated at run time.
-# for futher in f strings Google  python_docs for more 
+# empty dictionary
+dict5 = {}
+print(any(dict5))
 
-
-print('Taxable: ',product['taxable'])
-print('In Stock:',product['in_stock'])
-print('Models:')
-
-for model in product['models']:
-
- print(" " * 10 + model)
-
-# The " " * 10 on the last line of code says to print a space (“ ”) ten times. In other 
-# words, indent ten spaces. If you don’t put exactly one space between those quotation marks, 
-# you won’t get 10 spaces. You’ll get 10 of whatever is between the 
-# quotation marks, which also means you’ll get nothing if you don’t put anything 
-# between the quotation marks.
+# IMP
+# i have use this function on list and tuple see how to performs
 
 
 
@@ -719,8 +691,369 @@ Dcw0001 ["taxable"] = True
 print(Dcw0001)
 
 
-# Nesting Dictionaries pending
+
+#  Multi-Key Dictionaries #
+
+
+
+# For example, suppose that just knowing the person’s full name isn’t enough. You 
+# want to also know the year they were hired, their date of birth, and whether or 
+# not that employee has been issued a company laptop. The dictionary for any one 
+# person may look more like this:
+
+# employee = {
+#  'name' : 'Haru Tanaka',
+#  'year_hired' : 2005,
+#  'dob' : '11/23/1987',
+#  'has_laptop' : False
+# }
+
+
+# Suppose you need a dictionary of products that you sell. For each product you 
+# want to know its name, its unit price, whether or not it’s taxable, and how many 
+# you currently have in stock. The dictionary may look something like this (for one 
+# product):
+
+# product = {
+#  'name' : 'Ray-Ban Wayfarer Sunglasses',
+#  'unit_price' : 112.99,
+#  'taxable' : True,
+#  'in_stock' : 10
+# }
+
+
+# Notice that in each example, the key name is always enclosed in quotation marks. 
+# We even enclosed the date in dob (date of birth) in quotation marks. If you don’t, it 
+# may be treated as a set of numbers, as in “11 divided by 23 divided by 1987” which 
+# isn’t useful information. Booleans are either True or False (initial caps) with no 
+# quotation marks. Integers (2005, 10) and floats (112.99) are not enclosed in quotation marks either. 
+# It’s important to make sure you always do these correctly, as 
+# shown in the examples above.
+# The value for a property can be a list, tuple, or set; it doesn’t have to be a single value. 
+# For example, for the sunglasses product, maybe you offer two models 
+# (color), black and tortoise. You could add a colors or model key and list the items 
+# as a comma-separated list in square brackets like this:
+
+product = {
+ 'name' : 'Ray-Ban Wayfarer Sunglasses',
+ 'unit_price' : 112.99,
+ 'taxable' : True,
+ 'in_stock' : 10,
+ 'models' : ['Black', 'Tortoise']
+}
+
+
+# Next let’s look at how you may display the dictionary data. You can use the simple 
+# dictionaryname[key] syntax to print just the value of each key. For example, 
+# using that last product example, the output of this code:
+
+print(product['name'])
+print(product['unit_price'])
+print(product['taxable'])
+print(product['in_stock'])
+print(product['models'])
+
+# output would be:
+
+# Ray-Ban Wayfarer Sunglasses
+# 112.99
+# True
+# 10
+# ['Black', 'Tortoise']
+
+
+
+# You could fancy it up by adding some descriptive text to each print statement, 
+# followed by a comma and the code. You could also loop through the list to print 
+# each model on a separate line. And you can use an f-string to format any data if 
+# you like. For example, here is a variation on the print()
+
+
+product = {
+
+ 'name' : 'Ray-Ban Wayfarer Sunglasses',
+ 'unit_price' : 112.99,
+ 'taxable' : True,
+ 'in_stock' : 10,
+ 'models' : ['Black', 'Tortoise']
+
+}
+
+print('Name: ', product['name'])
+print('Price: ',f"${product['unit_price']:.2f}")
+
+# A formatted string literal or f-string is a string literal that is prefixed with 'f' or 'F'. 
+# These strings may contain replacement fields, which are expressions delimited by curly braces {}. 
+# While other string 
+# literals always have a constant value, formatted strings are really expressions evaluated at run time.
+# for futher in f strings Google  python_docs for more 
+
+
+print('Taxable: ',product['taxable'])
+print('In Stock:',product['in_stock'])
+print('Models:')
+
+for model in product['models']:
+
+ print(" " * 10 + model)
+
+# The " " * 10 on the last line of code says to print a space (“ ”) ten times. In other 
+# words, indent ten spaces. If you don’t put exactly one space between those quotation marks, 
+# you won’t get 10 spaces. You’ll get 10 of whatever is between the 
+# quotation marks, which also means you’ll get nothing if you don’t put anything 
+# between the quotation marks.
 
 
 
 
+
+#  Python Nested Dictionary
+
+
+# A dictionary can contain another dictionary, 
+# which in turn can contain dictionaries themselves, 
+# and so on to arbitrary depth. This is known as nested dictionary.
+
+# Nested dictionaries are one of many ways to represent structured 
+# information (similar to ‘records’ or ‘structs’ in other languages).
+
+# Create a Nested Dictionary
+# A nested dictionary is created the same way a normal dictionary is created.
+#  The only difference is that each value is another dictionary.
+
+# Let’s build a dictionary that stores employee record.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+# The dict() Constructor
+# There are several ways to create a nested dictionary using a type constructor called dict().
+
+# To create a nested dictionary, simply pass dictionary key:value pair as keyword arguments to
+# dict() Constructor.
+
+D = dict(emp1 = {'name': 'Bob', 'job': 'Mgr'},
+         emp2 = {'name': 'Kim', 'job': 'Dev'},
+         emp3 = {'name': 'Sam', 'job': 'Dev'})
+
+print(D)
+# Prints {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+#         'emp2': {'name': 'Kim', 'job': 'Dev'},
+#         'emp3': {'name': 'Sam', 'job': 'Dev'}}
+# You can use dict() function along with the zip() function, to combine separate lists 
+# of keys and values obtained dynamically at runtime.
+
+IDs = ['emp1','emp2','emp3']
+
+EmpInfo = [{'name': 'Bob', 'job': 'Mgr'},
+           {'name': 'Kim', 'job': 'Dev'},
+           {'name': 'Sam', 'job': 'Dev'}]
+
+D = dict(zip(IDs, EmpInfo))
+
+print(D)
+# Prints {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+#         'emp2': {'name': 'Kim', 'job': 'Dev'},
+#         'emp3': {'name': 'Sam', 'job': 'Dev'}}
+# You’ll often want to create a dictionary with default values for each key. 
+# The fromkeys() method offers a way to do this.
+
+IDs = ['emp1','emp2','emp3']
+Defaults = {'name': '', 'job': ''}
+
+D = dict.fromkeys(IDs, Defaults)
+
+print(D)
+# Prints {'emp1': {'name': '', 'job': ''},
+#         'emp2': {'name': '', 'job': ''},
+#         'emp3': {'name': '', 'job': ''}}
+
+# Access Nested Dictionary Items
+# You can access individual items in a nested dictionary by specifying key in multiple square brackets.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+print(D['emp1']['name'])
+# Prints Bob
+
+print(D['emp2']['job'])
+# Prints Dev
+# If you refer to a key that is not in the nested dictionary, an exception is raised.
+
+print(D['emp1']['salary'])
+# Triggers KeyError: 'salary'
+# To avoid such exception, you can use the special dictionary get() method. 
+# This method returns the value for key if key is in the dictionary, else None,
+#  so that this method never raises a KeyError.
+
+# key present
+print(D['emp1'].get('name'))
+# Prints Bob
+
+# key absent
+print(D['emp1'].get('salary'))
+# PrintsNone
+# Change Nested Dictionary Items
+# To change the value of a specific item in a nested dictionary, refer to its key.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+D['emp3']['name'] = 'Max'
+D['emp3']['job'] = 'Janitor'
+
+print(D['emp3'])
+# Prints {'name': 'Max', 'job': 'Janitor'}
+# Add or Update Nested Dictionary Items
+# Adding or updating nested dictionary items is easy. 
+# Just refer to the item by its key and assign a value. 
+# If the key is already present in the dictionary, its value is replaced by the new one.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+D['emp3'] = {'name': 'Max', 'job': 'Janitor'}
+
+print(D)
+# Prints {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+#         'emp2': {'name': 'Kim', 'job': 'Dev'},
+#         'emp3': {'name': 'Max', 'job': 'Janitor'}}
+# If the key is new, it is added to the dictionary with its value.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+D['emp4'] = {'name': 'Max', 'job': 'Janitor'}
+
+print(D)
+# Prints {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+#         'emp2': {'name': 'Kim', 'job': 'Dev'},
+#         'emp3': {'name': 'Sam', 'job': 'Dev'},
+#         'emp4': {'name': 'Max', 'job': 'Janitor'}}
+# Merge Two Nested Dictionaries
+# Use the built-in update() method to merge the keys and values of one nested dictionary into another. 
+# Note that this method blindly overwrites values of the same key if there’s a clash.
+
+D1 = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+      'emp2': {'name': 'Kim', 'job': 'Dev'}}
+
+D2 = {'emp2': {'name': 'Sam', 'job': 'Dev'},
+      'emp3': {'name': 'Max', 'job': 'Janitor'}}
+
+D1.update(D2)
+
+print(D1)
+# Prints {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+#         'emp2': {'name': 'Sam', 'job': 'Dev'},
+# #         'emp3': {'name': 'Max', 'job': 'Janitor'}}
+# Here the ’emp2′ record is updated while ’emp3′ is added to the dictionary.
+
+# Remove Nested Dictionary Items
+# There are several ways to remove items from a nested dictionary.
+
+# Remove an Item by Key
+# If you know the key of the item you want, you can use pop() method. It removes the key and returns its value.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+x = D.pop('emp3')
+
+print(D)
+# Prints {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+#         'emp2': {'name': 'Kim', 'job': 'Dev'}}
+
+# get removed value
+print(x)
+# Prints {'name': 'Sam', 'job': 'Dev'}
+# If you don’t need the removed value, use the del statement.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+del D['emp3']
+
+print(D)
+# Prints {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+#         'emp2': {'name': 'Kim', 'job': 'Dev'}}
+# Remove Last Inserted Item
+# The popitem() method removes and returns the last inserted item as a tuple.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+x = D.popitem()
+
+print(D)
+# Prints {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+#         'emp2': {'name': 'Kim', 'job': 'Dev'}}
+
+# get removed pair
+print(x)
+# Prints ('emp3', {'name': 'Sam', 'job': 'Dev'})
+# In versions before 3.7, popitem() would remove a random item.
+
+# Iterate Through a Nested Dictionary
+# You can iterate over all values in a nested dictionary using nested for loop.
+
+D = {'emp1': {'name': 'Bob', 'job': 'Mgr'},
+     'emp2': {'name': 'Kim', 'job': 'Dev'},
+     'emp3': {'name': 'Sam', 'job': 'Dev'}}
+
+for id, info in D.items():
+    print("\nEmployee ID:", id)
+    for key in info:
+        print(key + ':', info[key])
+
+# Prints Employee ID: emp1
+#        name: Bob
+#        job: Mgr
+
+#        Employee ID: emp2
+#        name: Kim
+#        job: Dev
+
+#        Employee ID: emp3
+#        name: Sam
+#        job: Dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
