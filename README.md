@@ -12,7 +12,7 @@ IDE i use is VSCODE not pycharm or anaconda
 and even jupyter notebook ,
 
 i want to have a strong grip in pythons basic especially when their is word that python is a easy language to learn
-which is a myth especially . non coder have a mindset that its just alphabets and numbers which we use in python
+which is a myth . non coder have a mindset that its just alphabets and numbers which we use in python
 or other languages .
 
 i really dont want to be overwhelmed by the idea that its 
