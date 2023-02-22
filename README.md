@@ -16,7 +16,7 @@ which is a myth . non coder have a mindset that its just alphabets and numbers w
 or other languages .
 
 i really dont want to be overwhelmed by the idea that its 
-[EASY].
+[EASY] .
 
 when comes to typing their will be so much error especially with words and with (,), (.), (/), (*), (#), ("") etc
 for a beginners .
