@@ -23,7 +23,11 @@ for a beginners .
 
 This is my experience while codeing u have to put efforts to understand  python .
 
+ now this repository will be Beginner level of python 
  
+ second repository which i want cerate it will be intermediate level of python
+ 
+ now pratice , pratice , pratice...................
 
 
 <|THANK_YOU|> ........ For reading 
