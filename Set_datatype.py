@@ -25,7 +25,7 @@
 
 # Cerate set of names
 
-name = {"raj,rahul,heena"}    # i have to use str " " in set { } to identify the type                               #  without
+name = {"raj,rahul,heena"}    # i have to use str " " in set { } to identify the type                              
 print(type(name))
 
 # cerate set of numbers 
@@ -99,5 +99,30 @@ set_sample.update([5,6,7,8,9])
 
 print("\nset_sample  .add() and update()")
 print(set_sample)
+
+
+
+# Python Loop Through Set  
+
+# You cannot access items in a set by referring to an index, since sets are unordered the items has no index.
+# But you can loop through the set items using a for loop, or ask if a specified value is present in a set,
+# by using the in keyword.
+
+
+
+# Loop through the set, and print the values:
+
+set_sample = {"apple", "banana", "cherry"}
+
+for x in set_sample :
+  print(x)
+
+  
+  
+  
+
+
+
+
 
 
