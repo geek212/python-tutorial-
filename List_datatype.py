@@ -1,53 +1,58 @@
-# # Defining and Using Lists
+# Defining and Using Lists
 
-# # The simplest data collection in Python is a list.
+#  The simplest data collection in Python is a list.
 
-# '''
-# A list is any list of data items, separated by commas, inside
-# square ([]) brackets. Typically, you assign a name to the list using an = sign, just as
-# you would with variables. If the list contains numbers, then don’t use quotation
-# marks around them.
 
-# '''
+ '''
+ A list is any list of data items, separated by commas, inside
+ square ([]) brackets. Typically, you assign a name to the list using an = sign, just as
+ you would with variables. If the list contains numbers, then don’t use quotation
+ marks around them.
 
-# # for Example if the list contains numbers, then don’t use quotation marks around them. 
-# # scores = [88, 92, 78, 90, 98, 84]
+ '''
 
-# # If the list contains strings then, as always, those strings should be enclosed in
-# # single or double quotation marks
+ 
+#  for Example if the list contains numbers, then don’t use quotation marks around them. 
+# scores = [88, 92, 78, 90, 98, 84]
 
-# # E.g :students = ["Harry", "Rahul", "Anita", "Ashish"]
+#  If the list contains strings then, as always, those strings should be enclosed in
+# single or double quotation marks
 
-# # if you print this variable the ouput will be same
+# E.g :students = ["Harry", "Rahul", "Anita", "Ashish"]
 
-# # "Harry", "Rahul", "Anita", "Ashish"
+# if you print this variable the ouput will be same
 
-# ''' 
-# Referencing list items by position
-# Each item in a list has a position number, starting with zero, even though you
-# don’t see any numbers. You can refer to any item in the list by its number using
-# the name for the list followed by a number in square brackets. In other words, use
-# this syntax:
-# list_name[x]
+# "Harry", "Rahul", "Anita", "Ashish"
 
-# '''
-# # Remember, the first item is always number zero, not one.
+
+''' 
+ Referencing list items by position
+ Each item in a list has a position number, starting with zero, even though you
+don’t see any numbers. You can refer to any item in the list by its number using
+the name for the list followed by a number in square brackets. In other words, use
+this syntax:
+list_name[x]
+
+'''
+
+
+# Remember, the first item is always number zero, not one.
 
 # students_name = ["Harry", "jackie", "Ken", "Rohan"]
 # print(students_name[0])
-# # output will be Harry
+# output will be Harry
 
-# #  it will be like [Harry (0)] [jackie (1)] [Ken(2)] [Rohan(3)]
+#   it will be like [Harry (0)] [jackie (1)] [Ken(2)] [Rohan(3)]
 
-# # In this example we will use numbers 
+#  In this example we will use numbers 
 
 # scores = [ 80 , 56 , 43 , 223 ]
 # print (scores[3])  # when i entered 4 in the bracket it shows error for output
 
-# # If you try to access a list item that doesn’t exist, you get an “index out of range” error
+# If you try to access a list item that doesn’t exist, you get an “index out of range” error
 
 
-# # 1. Looping through a list
+#  1. Looping through a list
 
 # scores = [ "80" , "56" , "43" , "223" ]
 # for score in scores :
@@ -57,64 +62,80 @@
 # for fruit in fruits :
 #     print(fruit)    # fruit & fruits 
 
-# '''Here, the for loop has printed each of the list items. In other words, the loop has
-# called the print() function four times, each time printing the current item in the list – i.e.
-# the name of a fruit or Score. 
-# '''
-# # IMP
+ '''Here, the for loop has printed each of the list items. In other words, the loop has
+ called the print() function four times, each time printing the current item in the list – i.e.
+ the name of a fruit or Score. 
+ '''
+ 
+ 
+#  IMP
 # ''' Lists are changeable objects
 # It's important to know that lists are changeable — you can add, remove,
 # or change list elements after the list is created.'''
 
-# # 2. List Comprehension
 
-# ''' List comprehension is similar to the for loop; however, it allows us to create a 
-# list and iterate through it in a single line. Due to its utter simplicity,
-# this method is considered one of the most robust ways of iterating over Python lists.
 
-# [You’ll notice that we’re using what looks like another for loop: for fruit in fruits.
-# The key here 
-# is that the command and the for..in structure are
-# enclosed with the print() command in square brackets; that’s what makes it a list comprehension.]
+#  2. List Comprehension
 
-# '''
-# # Example 1
-# fruits = ["Watermelon", "Grapes", "jackfruit", "Mango"]
-# [print(fruit + " " +  "Juice") for fruit in fruits]
-# # IMP use bracets for print with (for) / (in) 
-# # i used (" ") for spaces between fruit and juice for output
+ ''' 
+ List comprehension is similar to the for loop; however, it allows us to create a 
+ list and iterate through it in a single line. Due to its utter simplicity,
+ this method is considered one of the most robust ways of iterating over Python lists.
 
-# # Example 2
-# Cars = ["BMW", "Ferrai", "Land Rover", "Mercedes"]
-# [print(Car + " "+ "Sportscar" ) for Car in Cars]
+ [You’ll notice that we’re using what looks like another for loop: for fruit in fruits.
+ The key here 
+ is that the command and the for..in structure are
+ enclosed with the print() command in square brackets; that’s what makes it a list comprehension.]
 
-# # Example 3
-# Motorcycles_Brands = ["Heromotocorp" , "KTM" , "Royal_enfield" , "Bajaj" ]
-# [print(Motorcycles_Brand + "  " + "SuperBikes" + " " + "of india") for Motorcycles_Brand in Motorcycles_Brands]
+'''
+ 
+ #Example 1
+ fruits = ["Watermelon", "Grapes", "jackfruit", "Mango"]
+ [print(fruit + " " +  "Juice") for fruit in fruits]
+# MP use bracets for print with (for) / (in) 
+#  i used (" ") for spaces between fruit and juice for output
 
-# # Example 4
-# # GoalByargitinas ["34" , "43" , "45" , "345" , "23"]  # this output shows error
-# # [print(GoalByargitina + "Goal" ) for GoalByargitina in GoalByargitinas]
 
-# # Vegetables = ["Brinjal" , "Cabbage" , "okra", "Tomato"]
-# # [print(Vegetable + " " + " in_Delhi") for Vegetable in Vegetables]
+#  Example 2
+ Cars = ["BMW", "Ferrai", "Land Rover", "Mercedes"]
+[print(Car + " "+ "Sportscar" ) for Car in Cars]
 
-# # 3. A for Loop with range()
 
-# ''' Another method for looping through a Python list is the range() function along with a for loop. 
-# range() generates a sequence of integers from the provided starting and stopping indexes. 
-# An index refers to the position of elements in a list. 
-# The first item has an index of 0, the second list item is 1, and so on.) 
-# The syntax of the range function is as follows:
 
-# range(start, stop, step)
+#  Example 3
+Motorcycles_Brands = ["Heromotocorp" , "KTM" , "Royal_enfield" , "Bajaj" ]
+[print(Motorcycles_Brand + "  " + "SuperBikes" + " " + "of india") for Motorcycles_Brand in Motorcycles_Brands]
 
-# The start and step arguments are optional; only the stop argument is required.
-# The step determines if you skip list items; this is set as 1 by default, meaning no items are skipped.
-# If you only specify one parameter (i.e. the stop index),
-# the function constructs a range object containing all elements from 0 to stop-1.
 
-# '''
+
+#  Example 4
+#  GoalByargitinas ["34" , "43" , "45" , "345" , "23"]  # this output shows error
+#  [print(GoalByargitina + "Goal" ) for GoalByargitina in GoalByargitinas]
+
+
+ Vegetables = ["Brinjal" , "Cabbage" , "okra", "Tomato"]
+ [print(Vegetable + " " + " in_Delhi") for Vegetable in Vegetables]
+ 
+
+ 
+#  3. A for Loop with range()
+
+  ''' 
+  
+  Another method for looping through a Python list is the range() function along with a for loop. 
+   range() generates a sequence of integers from the provided starting and stopping indexes. 
+  An index refers to the position of elements in a list. 
+  The first item has an index of 0, the second list item is 1, and so on.) 
+  The syntax of the range function is as follows:
+
+ range(start, stop, step)
+
+ The start and step arguments are optional; only the stop argument is required.
+ The step determines if you skip list items; this is set as 1 by default, meaning no items are skipped.
+ If you only specify one parameter (i.e. the stop index),
+ the function constructs a range object containing all elements from 0 to stop-1.
+
+'''
 
 # fruits = ["Apple", "Mango", "Banana", "Peach"]
  
