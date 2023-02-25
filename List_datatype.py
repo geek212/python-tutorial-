@@ -38,34 +38,40 @@ list_name[x]
 
 # Remember, the first item is always number zero, not one.
 
-# students_name = ["Harry", "jackie", "Ken", "Rohan"]
-# print(students_name[0])
+ students_name = ["Harry", "jackie", "Ken", "Rohan"]
+ print(students_name[0])
 # output will be Harry
 
 #   it will be like [Harry (0)] [jackie (1)] [Ken(2)] [Rohan(3)]
 
 #  In this example we will use numbers 
 
-# scores = [ 80 , 56 , 43 , 223 ]
-# print (scores[3])  # when i entered 4 in the bracket it shows error for output
+scores = [ 80 , 56 , 43 , 223 ]
+print (scores[3])  # when i entered 4 in the bracket it shows error for output
 
 # If you try to access a list item that doesn’t exist, you get an “index out of range” error
 
 
 #  1. Looping through a list
 
-# scores = [ "80" , "56" , "43" , "223" ]
-# for score in scores :
-#    print (score)       # score & scores 
 
-# fruits = ["Apple", "Mango", "Pineapple", "Jackfruit"]
-# for fruit in fruits :
-#     print(fruit)    # fruit & fruits 
+scores = [ "80" , "56" , "43" , "223" ]
+for score in scores :
+        print (score)       # score & scores
+  
+  
+
+fruits = ["Apple", "Mango", "Pineapple", "Jackfruit"]
+for fruit in fruits :
+    print(fruit)    # fruit & fruits 
+  
+  
 
  '''Here, the for loop has printed each of the list items. In other words, the loop has
  called the print() function four times, each time printing the current item in the list – i.e.
  the name of a fruit or Score. 
  '''
+ 
  
  
 #  IMP
@@ -137,87 +143,94 @@ Motorcycles_Brands = ["Heromotocorp" , "KTM" , "Royal_enfield" , "Bajaj" ]
 
 '''
 
-# fruits = ["Apple", "Mango", "Banana", "Peach"]
+ fruits = ["Apple", "Mango", "Banana", "Peach"]
  
-# # Constructs range object containing elements from 0 to 3
-# for i in range(len(fruits)):
-#     print("The list at index", i, "contains g", fruits[i])
+# Constructs range object containing elements from 0 to 3
+ for i in range(len(fruits)):
+     print("The list at index", i, "contains g", fruits[i])
+   
+   
 
-# Vegetables = ["Brinjal" , "Cabbage" , "okra", "Tomato"]
+ Vegetables = ["Brinjal" , "Cabbage" , "okra", "Tomato"]
 
-# # Constructs range object containing elements from 0 to 3
-# for i in range(len(Vegetables)):   
-#     print("The list at index ", i , "contains a", Vegetables[i])
-
-
-
-# Shows = ["Bigboss" , "KBC", "Doremon", "Pokemon", "Beyblade"]
-
-# # Constructs range object containing elements from 0 to 4
-# for i in range(len(Shows)):
-#     print("the list of index", i , "Contains a", Shows[i])
+#  Constructs range object containing elements from 0 to 3
+ for i in range(len(Vegetables)):   
+     print("The list at index ", i , "contains a", Vegetables[i])
 
 
-# Cricketrs = ["Sachin", "Dravid", "Virat", "Dhoni", "Rohit","Jadeja"]
-# # Constructs range object containing elements from 0 to 5
-# for  i  in range(len(Cricketrs)):
-#     print("the lists of index", i , "Contains in a World Cup", Cricketrs[i])
+
+Shows = ["Bigboss" , "KBC", "Doremon", "Pokemon", "Beyblade"]
+
+#  Constructs range object containing elements from 0 to 4
+for i in range(len(Shows)):
+    print("the list of index", i , "Contains a", Shows[i])
+  
+  
+
+ Cricketrs = ["Sachin", "Dravid", "Virat", "Dhoni", "Rohit","Jadeja"]
+#  Constructs range object containing elements from 0 to 5
+ for  i  in range(len(Cricketrs)):
+     print("the lists of index", i , "Contains in a World Cup", Cricketrs[i])
 
 
-# # Methods for Working with Lists
+# Methods for Working with Lists
 
-# # Method What it Does  ?
+#  Method What it Does  ?
 
-# # append() Adds an item to the end of the list.
+# append() Adds an item to the end of the list.
 
-# # clear() Removes all items from the list, leaving it empty.
+#  clear() Removes all items from the list, leaving it empty.
 
-# # copy() Makes a copy of a list.
+#  copy() Makes a copy of a list.
 
-# # count() Counts how many times an element appears in a list.
+#  count() Counts how many times an element appears in a list.
 
-# # extend() Appends the items from one list to the end of another list.
+#  extend() Appends the items from one list to the end of another list.
 
-# # index() Returns the index number (position) of an element within a list.
+#  index() Returns the index number (position) of an element within a list.
 
-# # insert() Inserts an item into the list at a specific position.
+# insert() Inserts an item into the list at a specific position.
 
-# # pop() Removes an element from the list, and provides a copy of that item that 
-# # you can store in a variable.
+#  pop() Removes an element from the list, and provides a copy of that item that 
+#  you can store in a variable.
 
-# # remove() Removes one item from the list.
+#  remove() Removes one item from the list.
 
-# # reverse() Reverses the order of items in the list.
+#  reverse() Reverses the order of items in the list.
 
-# # sort() Sorts the list in ascending order. Put reverse=True inside the 
-# # parentheses to sort in descending order.
+# sort() Sorts the list in ascending order. Put reverse=True inside the 
+# parentheses to sort in descending order.
 
 
-# # Seeing whether a list contains an item
 
-# students_name = [ "Ashwin", "Rahul", "Jackei", "Manoj"]
+#  Seeing whether a list contains an item
 
-# # is Rahul in the lists
-# has_Rahul = "Rahul" in students_name # in operator used for true or false
-# print(has_Rahul)
+students_name = [ "Ashwin", "Rahul", "Jackei", "Manoj"]
+
+# is Rahul in the lists
+has_Rahul = "Rahul" in students_name # in operator used for true or false
+print(has_Rahul)
 
 # # is Rock on the lists
-# has_Rock = "Rock" in students_name # in operator used for true or false
-# print(has_Rock)
+has_Rock = "Rock" in students_name # in operator used for true or false
+print(has_Rock)
 
-# # Getting the length of a list which i previously done above so this is Explantion
 
-# students = ["Danny", "Harry", "Kunal", "Santosh"]
-# print(len(students))
+
+# Getting the length of a list which i previously done above so this is Explantion
+
+students = ["Danny", "Harry", "Kunal", "Santosh"]
+print(len(students))
 # # To determine how many items are in a list, use the len() function (short for 
 # # length). Put the name of the list inside the parentheses.
 
 
-# # Adding an item to the end of a list
 
-# # When you want your code to add a new item to the end of a list, use the .append()
-# # method with the value you want to add inside the parentheses. You can use either 
-# # a variable name or a literal value inside the quotation marks.
+# Adding an item to the end of a list
+
+# When you want your code to add a new item to the end of a list, use the .append()
+# method with the value you want to add inside the parentheses. You can use either 
+# a variable name or a literal value inside the quotation marks.
 
 
 # Cerate a variables with list of students_name
