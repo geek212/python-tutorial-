@@ -411,3 +411,13 @@ a <<= b
 print(a)
 
 
+
+
+# Underscores in Numbers
+
+# When you’re writing long numbers, you can group digits using underscores 
+# to make large numbers more readable
+
+number = 23_4_3435_90
+print(number)
+# python ignores underscore when reading digits
