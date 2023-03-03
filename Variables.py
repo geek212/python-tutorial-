@@ -134,6 +134,57 @@ print("welcome to google akash kumar")
 
 
 
+# Variables in strings
+
+name = "ada lovelace"
+print(name.title())
+# The title() method changes each word to title case, where each word 
+# begins with a capital letter
+
+
+
+#  you can change a string to all uppercase or all lowercase
+name = "Ada Lovelace"
+print(name.upper())
+
+name = "ADA LOVELACE"
+print(name.lower())
+
+
+
+
+
+# To insert a variable’s value into a string, place the letter f immediately 
+# before the opening quotation mark. Put braces around the name or names 
+# of any variable you want to use inside the string. Python will replace each 
+# variable with its value when the string is displayed.
+# These strings are called f-strings. The f is for format, because Python 
+# formats the string by replacing the name of any variable in braces with its 
+# value.
+
+name = "Ashwin"
+last_name = "nair"
+full_name = f"{name} {last_name}"
+print(full_name)
+# F-strings were first introduced in Python 3.6.
+
+
+
+
+# Constant change  in variable of python 
+
+# A constant is like a variable whose value stays the same throughout the life 
+# of a program. Python doesn’t have built-in constant types, but Python programmers use all capital 
+# letters to indicate a variable should be treated as a 
+# constant and never be changed.a
+
+MAXCR = 456
+print(MAXCR)
+
+# When you want to treat a variable as a constant in your code, make the 
+# name of the variable all capital letters.
+
+
 
 
 
