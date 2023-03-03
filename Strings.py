@@ -224,3 +224,27 @@ print(letter)
 
 
 
+# Avoiding Syntax Errors with Strings
+
+# One kind of error that you might see with some regularity is a syntax error. 
+# A syntax error occurs when Python doesn’t recognize a section of your program as valid Python code.
+#  For example, if you use an apostrophe within 
+# single quotes, you’ll produce an error. 
+# This happens because Python interprets everything between the first single quote and the apostrophe as a 
+# string. It then tries to interpret the rest of the text as Python code, which 
+# causes errors
+
+# Example 1 Avoid synatax error with strings
+
+# name = 'ashwin'.'
+# print(name)
+# # Python can’t identify where the string 
+# should end
+
+name = "ashwin ."  # this is apostrophe
+print(name)
+# The apostrophe appears inside a set of double quotes, so the Python 
+# interpreter has no trouble reading the string correctly
+
+
+
