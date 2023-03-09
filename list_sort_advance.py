@@ -7,13 +7,16 @@
 # line, the code creates a list of four dates, and the code is perfectly fine.
 # dates = [dt.date(2020,12,31), dt.date(2019,1,31), dt.date(2018,2,28), 
 # dt.date(2020,1,1)]
+
 # The computer certainly won’t mind if you create the list this way. But if you want 
 # to make the code more readable to yourself or other developers, you may want 
 # to create and append each date, one at a time, so just so it’s a little easier to see 
 # what’s going on and so you don’t have to deal with so many commas in one line 
-# of code. Figure 3-10 shows an example where we created an empty list named 
+# of code.  
+
 # datelist:
 # datelist = []
+
 # Then we appended one date at a time to the list using the dt.date(year,month,day)
 # syntax
 
