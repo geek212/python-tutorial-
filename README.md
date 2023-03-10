@@ -65,6 +65,8 @@ This is my experience while codeing u have to put efforts to understand  python 
  second repository which i want to cerate it will be intermediate level of python
  
  now pratice , pratice , pratice ................... i m saying for my self 
+ 
+ Don't Doubt ur self & dont give up
 
 
 <|THANK_YOU|> ........ For reading 
