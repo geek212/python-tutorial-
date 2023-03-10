@@ -69,4 +69,7 @@ This is my experience while codeing u have to put efforts to understand  python 
  Don't Doubt ur self & dont give up
 
 
+
+KNOWLEDGE IS YOUR BEST_FRIEND 
+
 <|THANK_YOU|> ........ For reading 
