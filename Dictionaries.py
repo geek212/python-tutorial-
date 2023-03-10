@@ -155,7 +155,7 @@ print(students_dict.get(student_name))
 
 
 # student_name = "jaky"
-# print(student_dict.get(student_name))
+# print(student_dict.get(student_name)) error output
 
 # You can actually pass two values to get(), the second one being what you want it 
 # to return if the get fails to find what you’re looking for. For instance,
@@ -883,7 +883,7 @@ print(D['emp2']['job'])
 # Prints Dev
 # If you refer to a key that is not in the nested dictionary, an exception is raised.
 
-print(D['emp1']['salary'])
+# print(D['emp1']['salary']) error 
 # Triggers KeyError: 'salary'
 # To avoid such exception, you can use the special dictionary get() method. 
 # This method returns the value for key if key is in the dictionary, else None,
