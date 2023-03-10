@@ -181,8 +181,54 @@ identifies that item, and newvalue with whatever you want the new value to be.
 # students_dict["standrand XI"] = "Arjun"
 # print(students_dict["standrand XI"])
  
+# Rename or change  a Key in a Python Dictionary
+
+#   dictionary
+ini_dict = {
+
+    'kunal': 1, 
+    'harry': 5,
+	'jhonny': 10,
+    'akshat': 15
+             
+}
+
+# printing 
+print("initial 1st dictionary", ini_dict)
+
+# changing keys of dictionary
+ini_dict['akash'] = ini_dict['akshat']
+del ini_dict['akshat']
 
 
+# printing final result
+print("final dictionary", str(ini_dict))
+
+
+# Rename a Key in a Python Dictionary using Python pop() 
+
+#  dictionary
+ini_dict = {
+
+    'nikhil': 1,         
+    'vashu': 5,
+	'manjeet': 10,
+    'akshat': 15
+}
+
+# printing initial json
+print("initial 1st dictionary", ini_dict)
+
+# changing keys of dictionary
+ini_dict['akash'] = ini_dict.pop('akshat')
+
+# printing final result
+print("final dictionary", str(ini_dict))
+
+    
+    
+       
+    
 # Adding or changing dictionary data
 
 '''
