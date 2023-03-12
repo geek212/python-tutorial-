@@ -32,7 +32,7 @@ This is my experience while codeing u have to put efforts to understand  python 
  >3 Variables.py <
  >4 multiple assignments <
  >5 python operators.py <
- >6 type_casting.py <
+ >6 type_casting.py 
  
  Now starts the real deal in pythons basics by me , cuzz i  Self_studying that mean i have to 
  manage it what should i focus and what_not according my goal 
@@ -40,16 +40,16 @@ This is my experience while codeing u have to put efforts to understand  python 
  So here we go with pythons index
  
  >7 input_function.py <
- >8 Strings.py <
+ >8 Strings.py 
  
  Now data structure data_types of lists
  
  >9 List_datatype.py <
  >10 Python For Loop - For i and Range.py <
- >11 List_sort_advance.py <
+ >11 List_sort_advance.py 
  
  And now with Tuple or two pull 
- >12 Tuple_datatype.py <
+ >12 Tuple_datatype.py 
  
  Now confusing part difference between Dictionaries  and Set both have {} curve brackets
  man this datatype really pissed me off 
@@ -60,7 +60,7 @@ This is my experience while codeing u have to put efforts to understand  python 
   
   
  And final one is most important for our codeing mindset
- >16 Zen_of_python.py<
+ >16 Zen_of_python.py
  Just Wikipedia this stuff as whole for ur understanding 
  
  
